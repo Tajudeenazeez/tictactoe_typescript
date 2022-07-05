@@ -1,12 +1,12 @@
 import React from 'react';
 import reducer,{initialState, StateType, Action } from '../reducer/Reducer';
 
-type GameContextType = {
+export type GameContextType = {
     game: StateType,
     dispatchActionGame: React.Dispatch<Action>,
 }
 
-type GameProviderProps = {
+export type GameProviderProps = {
     children: React.ReactNode 
 }
 

@@ -6,7 +6,7 @@ export type StateType = {
   start: boolean;
 }
 
-enum ActionKind  {
+export enum ActionKind  {
   PLAY = "play",
   START = "start",
   CHOOSE = "choose",

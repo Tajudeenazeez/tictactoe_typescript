@@ -1,10 +1,10 @@
 import React from 'react';
 import './app.css'
-import Board from './board/Board';
+import Board from './components/board/Board';
 import Play from './components/Play';
 import End from './components/End';
-import Games from './components/Games';
-import Rectangle from './components/context/Rectangle';
+import Games from './components/game/Games';
+import Rectangle from './context/Rectangle';
 import Modal from './components/modal/Modal';
 import ModalRestart from './components/modal/ModalRestart';
 

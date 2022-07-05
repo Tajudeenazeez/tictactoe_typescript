@@ -1,0 +1,103 @@
+.modal__wrapper {
+    width: 100%;
+    height: 100px;
+    background-color: #1f3641;
+    position: absolute;
+    top: 30%;
+}
+
+.modal__content {
+    width: 20%;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9px;
+    font-family: outfit, Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: #f2b137;
+    
+}
+
+.btn {
+    display: inline-block;
+  
+    font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 5px;
+    line-height: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 70%;
+    border-radius: 5px;
+    border: none;
+  }
+  .modal__title {
+    color: #a8bfc9;
+  }
+
+  .modal__subtitle {
+    color: #f2b137;
+    font-size: 12px;
+    text-transform: uppercase;
+
+  }
+
+  .modal_subtitle-restart {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    color: #8ea5af;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 9px;
+    word-spacing: 6.9px;
+  }
+  .btn__primary {
+    display: inline-block;
+    color: #f2b137;
+    background-color:  #10212a45;
+    border: 2px solid #10212a;
+    
+  
+    /* transform: translate(-50%, -50%);   */
+  }
+  .btn-quit {
+    width: 30px;
+    height: 20px;
+    left: 20%;
+    
+  }
+  .btn-next {
+    width: 55px;
+    height: 20px;
+    right: 20%;
+    background-color: #f2b137;
+
+  }
+  .btn-cancel {
+    width: 60px;
+    height: 20px;
+    top: 60%;
+    left: 10%;
+
+    
+  }
+  .btn-restart {
+    width: 60px;
+    height: 20px;
+    top: 60%;
+    right: 10%;
+    background-color: #f2b137;
+  }
+
+  strong {
+    font-size:  45px;
+    position: absolute;
+    left: -9%;
+    top: 18%;
+  }

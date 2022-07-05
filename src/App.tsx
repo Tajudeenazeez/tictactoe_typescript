@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './app.css'
+import Board from './board/Board';
+import Play from './components/Play';
+import End from './components/End';
+import Games from './components/Games';
+import useTicTacToe from './components/hook/useTicTacToe';
+import Rectangle from './components/context/Rectangle';
+import Modal from './components/modal/Modal';
+import ModalRestart from './components/modal/ModalRestart';
 
+
+export const  GameContext = React.createContext(Board);
 function App() {
+  const game = useTicTacToe();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+    // <GameContext.Provider>
+      <div className="App">
+        {/* <Board/> */}
+        {/* <Rectangle/> */}
+        {/* <Modal/> */}
+        <ModalRestart/>
+
+      </div>
+    // </GameContext.Provider>
   );
 }
 

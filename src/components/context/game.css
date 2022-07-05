@@ -1,0 +1,84 @@
+.game__board {
+    width: 200px;
+    height: 200px;
+    margin: 90px auto;
+}
+
+.square__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 0.01px;
+
+   
+
+}
+ .game__square {
+    /* flex: 1 0 30px; */
+    width: 45px;
+    height: 45px;
+    background-color: #1f3641;
+    border-radius: 5px;
+    
+ }
+ .game__btn {
+    box-sizing: border-box;
+    height: 26px;
+    font-size: 8px;
+    font-family: outfit;
+    line-height: 9px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 1px 4px;
+ }
+ .game__btn--primary {
+    background-color: #32c3bd;
+ }
+ .game__btn--secondary {
+    background-color: #a8bfc9;
+ }
+ .game__btn--tertiary {
+    background-color: #f2b137;
+ }
+ strong {
+    display: block;
+
+ }
+ .game__board-top {
+    position: relative;
+ }
+
+ .board__symbol-x {
+    position: absolute;
+    top: -20px;
+    left: 2px;
+    color: #32c3bd;
+    font-size: 19px;
+  }
+  .board__symbol-o {
+    position: absolute;
+    top: -24px;
+    left: 10.8px;
+    color: #f2b137;
+    font-size: 29px;
+
+  }
+  .game__turn {
+    position: absolute;
+    box-sizing: border-box;
+    top: -17px;
+    left: 25%;
+    width: 51px;
+    height: 17px;
+    border-radius: 5px;
+    background-color: #1f3641;
+    font: 800 8px/7px outfit;
+    text-align: center;
+    text-transform: uppercase;
+    color: #a8bfc9;
+    padding: 4px 3px;
+  }

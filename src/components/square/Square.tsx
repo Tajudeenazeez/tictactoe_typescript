@@ -2,6 +2,8 @@ import React from 'react';
 import { GameContextWrapper } from '../../context/game';
 import { ActionKind } from '../../reducer/Reducer';
 import WinnerDecider from '../../util/WinnerDecider';
+import './Square.css'
+
 
 
 type SquareProps = {
@@ -23,6 +25,7 @@ const Square = ({index}: SquareProps) => {
     })
   }
   return (
-    <button onClick={startPlayer} className={`squares squares--${gameContext?.game.board[index]}`}>{gameContext?.game.board[index]}</button>
+    <button onClick={startPlayer} className={`square square--${gameContext?.game.board[index]}`}>{gameContext?.game.board[index]}</button>
   )
 }
+export default Square

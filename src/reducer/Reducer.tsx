@@ -6,17 +6,30 @@ export type StateType = {
   start: boolean;
 }
 
-export enum ActionKind  {
-  PLAY = "play",
-  START = "start",
-  CHOOSE = "choose",
-  RESTART = "restart"
-}
+// export enum ActionKind  { 
+//   RESTART = "restart",
+//   REFRESH = 'refresh',
+//   START = "start",
+//   CHOOSE = "choose",
+// }
 
-export type Action = {
-  type: ActionKind,
-  index: number
+export type  ActionPlay = {
+  type: "PLAY",
+  index: number,
 }
+export type  ActionStart ={
+  type: "START"
+}
+export type ActionChoose = {
+  type: "CHOOSE",
+}
+export type ActionRestart = {
+  type: "RESTART",
+}
+export type ActionRefresh = {
+  type: "REFRESH"
+}
+ export type ActionKind = ActionPlay | ActionRestart | ActionRefresh | ActionChoose
 
 
 export const initialState:StateType  = {
@@ -28,35 +41,38 @@ export const initialState:StateType  = {
 
 
 //reducer function
-const reducer = (state:StateType, action: Action) => {
-  const { START, CHOOSE, RESTART, PLAY } = ActionKind;
+const reducer = (state:StateType, action: ActionKind) => {
   switch (action.type) {
-    case PLAY:
+    case "PLAY":
       const boardIndex = action.index
       const boards = state.board.slice()
       boards[boardIndex] = state.xJustPlayed ? "X":"O"   
       return {
         ...state,
-        type: START,
+        boards,
         xJustPlayed: !state.xJustPlayed
       }
-      case START:
+    case "RESTART":
       return {
         ...state,
         start: true
       }
-    case CHOOSE:
+    case "CHOOSE":
       return {
         ...state,
         xJustPlayed: !state.xJustPlayed
       }
-    case RESTART:
+    case "RESTART":
       return {
         ...state,
         board: Array(9).fill(null),
         start: true,
         xJustPlayed: false,
       }
+      case "REFRESH":
+        return {
+          initialState
+        }
     default:
       return state;
   }

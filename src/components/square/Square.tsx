@@ -20,7 +20,7 @@ const Square = ({index}: SquareProps) => {
     }
     
     gameContext?.dispatchActionGame({
-      type: ActionKind.PLAY,
+      type: 'PLAY',
       index
     })
   }

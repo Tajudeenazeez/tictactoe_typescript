@@ -1,17 +1,8 @@
-import React, { Dispatch, useReducer } from "react";
-
 export type StateType = {
   board: (null | 'O' | 'X')[];
   xJustPlayed: boolean;
   start: boolean;
 }
-
-// export enum ActionKind  { 
-//   RESTART = "restart",
-//   REFRESH = 'refresh',
-//   START = "start",
-//   CHOOSE = "choose",
-// }
 
 export type  ActionPlay = {
   type: "PLAY",
@@ -29,7 +20,7 @@ export type ActionRestart = {
 export type ActionRefresh = {
   type: "REFRESH"
 }
- export type ActionKind = ActionPlay | ActionRestart | ActionRefresh | ActionChoose
+ export type ActionKind = ActionStart | ActionPlay | ActionRestart | ActionRefresh | ActionChoose
 
 
 export const initialState:StateType  = {
